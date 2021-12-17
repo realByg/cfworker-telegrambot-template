@@ -38,7 +38,7 @@
 3. Run `npm run publish` to publish to a Cloudflare worker.
 
 #### 🤨 Limitations
-* Some node modules like `fs` won't be available
+* Node.js [built-in modules](https://www.w3schools.com/nodejs/ref_modules.asp) won't be available
 * Currently only supports `telegraf@3.x`
 * Other runtime limitations for Cloudflare workers: https://developers.cloudflare.com/workers/runtime-apis/web-standards
 
