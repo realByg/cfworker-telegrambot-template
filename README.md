@@ -25,6 +25,7 @@
 	    },
     }
     ```
+3. Rename `wrangler.example.toml` to `wrangler.toml` and setup your wrangler configuration.
 
 #### 👉 Development
 1. Run `npm run ngrok` to start ngrok local port forwrading. Copy the ngrok URL to `webhook.host` in `bot.config.js` .
