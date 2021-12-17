@@ -2,7 +2,7 @@
 	"name": "cfworker-telegrambot-template",
 	"version": "0.0.1",
 	"description": "Host your Telegram bot on Cloudflare workers",
-	"main": "./main.js",
+	"main": "./src/index.ts",
 	"scripts": {
 		"ngrok": "ngrok http 8080",
 		"webhook:set": "node webhook.js set",

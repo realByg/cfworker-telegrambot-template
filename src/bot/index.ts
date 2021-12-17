@@ -1,5 +1,5 @@
 import { Telegraf } from 'telegraf'
-import botConfig from '../bot.config'
+import botConfig from '../../bot.config'
 
 const bot = new Telegraf(botConfig.token)
 

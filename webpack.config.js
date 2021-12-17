@@ -2,9 +2,12 @@ const path = require('path')
 
 module.exports = {
 	mode: 'production',
-	entry: './main.js',
+	entry: './src/index.ts',
 	node: {
 		fs: 'empty',
+		// tls: 'empty',
+		// net: 'empty',
+		// os: 'empty',
 	},
 	output: {
 		filename: 'worker.js',
@@ -25,7 +28,7 @@ module.exports = {
 			},
 			{
 				test: /\.(ts|js)?$/,
-				include: /(node_modules\\@cfworker\\web|bot)/,
+				include: /(node_modules\\@cfworker\\web|src)/,
 				loader: 'babel-loader',
 				options: {
 					presets: ['@babel/preset-env', '@babel/preset-typescript'],
