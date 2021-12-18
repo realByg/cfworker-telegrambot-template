@@ -20,25 +20,29 @@ rl.question('1. setWebhook\t2. deleteWebhook\t3. getWebhookInfo\n', (_choice) =>
 					webhookHost.endsWith('/')
 				) {
 					console.log('invalid webhook host')
-					rl.close()
-					return
+				} else {
+					bot.telegram
+						.setWebhook(webhookHost.trim() + botConfig.webhookPath)
+						.then(() => console.log('done'))
+						.catch((e) => console.error(e))
+						.finally(() => rl.close())
 				}
-
-				bot.telegram.setWebhook(webhookHost.trim() + botConfig.webhookPath)
-				console.log('done')
-				rl.close()
 			})
 			break
 		case 2:
-			bot.telegram.deleteWebhook()
-			console.log('done')
-			rl.close()
+			bot.telegram
+				.deleteWebhook()
+				.then(() => console.log('done'))
+				.catch((e) => console.error(e))
+				.finally(() => rl.close())
 			break
 		case 3:
-			bot.telegram.getWebhookInfo().then((data) => {
-				console.log(data)
-			})
-			rl.close()
+			bot.telegram
+				.getWebhookInfo()
+				.then((data) => console.log(data))
+				.then(() => console.log('done'))
+				.catch((e) => console.error(e))
+				.finally(() => rl.close())
 			break
 	}
 })

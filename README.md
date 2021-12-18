@@ -1,4 +1,4 @@
-# 🤖 cfworker-telegrambot-template
+# 🤖 `cfworker-telegrambot-template`
 ### Host your Telegram bot on Cloudflare workers
 
 #### 🏃‍♀️ Setup
@@ -34,8 +34,10 @@
 2. Run `npm run publish` to publish to a Cloudflare worker.
 
 #### 🤨 Limitations
-* Some Node.js [built-in modules](https://www.w3schools.com/nodejs/ref_modules.asp) won't be available, like `fs`, you can use `resolve.fallback` option in [webpack](https://webpack.js.org/configuration/resolve/#resolvefallback) for other Node.js core modules
-* Currently only supports `telegraf@3.x`
+* Some Node.js built-in modules won't be available, you can set webpack `node` option to use some of them.
+    * available modules: https://github.com/webpack/node-libs-browser/blob/master/README.md
+    * webpack configuration: https://v4.webpack.js.org/configuration/node/
+* Only supports `telegraf@3.x`
 * Other runtime limitations for Cloudflare workers: https://developers.cloudflare.com/workers/runtime-apis/web-standards
 
 #### 📘 Useful docs

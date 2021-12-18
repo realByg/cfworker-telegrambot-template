@@ -10,4 +10,5 @@
             "@cloudflare/workers-types"
         ],
     },
+    "exclude": ["node_modules"]
 }
