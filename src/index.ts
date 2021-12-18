@@ -4,6 +4,6 @@ import bot from './bot'
 import botConfig from '../bot.config'
 
 const router = new Router()
-router.post(botConfig.webhook.path, createTelegrafMiddware(bot))
+router.post(botConfig.webhookPath, createTelegrafMiddware(bot))
 
 new Application().use(router.middleware).listen()

@@ -5,12 +5,10 @@
 	"main": "./src/index.ts",
 	"scripts": {
 		"ngrok": "ngrok http 8080",
-		"webhook:set": "node webhook.js set",
+		"webhook": "node webhook.js",
 		"dev": "wrangler dev --port 8080",
 		"build": "wrangler build",
-		"publish": "wrangler publish",
-		"webhook:delete": "node webhook.js delete",
-		"webhook:getInfo": "node webhook.js getInfo"
+		"publish": "wrangler publish"
 	},
 	"author": "ZayaByghead <ZayaByghead@gmail.com>",
 	"devDependencies": {

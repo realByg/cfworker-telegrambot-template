@@ -18,27 +18,23 @@
     ```
     // bot.config.js
     module.exports = {
-	token: '', //get your bot token from @botfather
-	webhook: {
-		    host: '', // https://your.subdomain.workers.dev
-		    path: '/', // a random string
-	    },
+        token: '', //get your bot token from @botfather
+        webhookPath: '/wefwefwefe', // a random string
     }
     ```
 3. Rename `wrangler.example.toml` to `wrangler.toml` and setup your wrangler configuration.
 
 #### 👉 Development
-1. Run `npm run ngrok` to start ngrok local port forwrading. Copy the ngrok URL to `webhook.host` in `bot.config.js` .
-2. Run `npm run webhook:set` to set the webhook for the bot.
+1. Run `npm run ngrok` to start ngrok local port forwrading.
+2. Run `npm run webhook` to set the webhook for the bot.
 3. Run `npm run dev` to start `wrangler dev`.
 
 #### 📢 Deployment
-1. Set your Cloudflare worker subdomain in `webhook.host` in `bot.config.js` .
-2. Run `npm run webhook:set` to set the webhook for the bot.
-3. Run `npm run publish` to publish to a Cloudflare worker.
+1. Run `npm run webhook` to set the webhook for the bot.
+2. Run `npm run publish` to publish to a Cloudflare worker.
 
 #### 🤨 Limitations
-* Node.js [built-in modules](https://www.w3schools.com/nodejs/ref_modules.asp) won't be available
+* Some Node.js [built-in modules](https://www.w3schools.com/nodejs/ref_modules.asp) won't be available, like `fs`, you can use `resolve.fallback` option in [webpack](https://webpack.js.org/configuration/resolve/#resolvefallback) for other Node.js core modules
 * Currently only supports `telegraf@3.x`
 * Other runtime limitations for Cloudflare workers: https://developers.cloudflare.com/workers/runtime-apis/web-standards
 
