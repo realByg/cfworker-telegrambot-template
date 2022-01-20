@@ -5,7 +5,7 @@ const rl = readline.createInterface({
 })
 
 const botConfig = require('./bot.config')
-const Telegraf = require('telegraf')
+const { Telegraf } = require('telegraf')
 const bot = new Telegraf(botConfig.token)
 
 rl.question('1. setWebhook\t2. deleteWebhook\t3. getWebhookInfo\n', (_choice) => {
