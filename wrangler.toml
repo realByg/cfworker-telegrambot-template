@@ -1,5 +1,4 @@
 name = 'cfworker-telegrambot-template'
-routes = ['your.subdomain.workers.dev']
 type = 'webpack'
 workers_dev = true
 webpack_config = 'webpack.config.js'

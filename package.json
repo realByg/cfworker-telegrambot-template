@@ -1,6 +1,6 @@
 {
 	"name": "cfworker-telegrambot-template",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Host your Telegram bot on Cloudflare workers",
 	"main": "./src/index.ts",
 	"scripts": {

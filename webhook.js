@@ -1,7 +1,7 @@
 const readline = require('readline')
 const rl = readline.createInterface({
 	input: process.stdin,
-	output: process.stdout,
+	output: process.stdout
 })
 
 const botConfig = require('./bot.config')

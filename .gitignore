@@ -3,4 +3,3 @@ bot.config.js
 package-lock.json
 dist/
 worker/
-wrangler.toml
